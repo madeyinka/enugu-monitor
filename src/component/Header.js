@@ -1,6 +1,30 @@
-import React from 'react'
+import React, {useEffect} from 'react'
+import useContent from '../hook/useContext'
+import Axios from '../hook/Axios'
 
 function Header() {
+    const {setContent} = useContent()
+    
+    useEffect(() => {
+        let isMounted = true
+        const controller = new AbortController()
+        const fetchPosts = async () => {
+        try {
+            const response = await Axios.get('/content/posts?user='+process.env.REACT_APP_USER, {
+                signal:controller.signal
+        })
+        isMounted && setContent(response.data.data.posts)
+        } catch (err) {
+                console.error(err.message)
+            }
+        }
+        fetchPosts()
+
+        return () => {
+            isMounted = false
+            controller.abort()
+        }
+    },[])
   return (
     <>
     <header className="main-header header-style-1 font-heading">
@@ -27,10 +51,7 @@ function Header() {
                 <div className="mobile_menu d-lg-none d-block"></div>
                 <div className="main-nav d-none d-lg-block float-left">
                     <nav>
-
-
-                        <ul className="main-menu d-none d-lg-inline font-small">
-                            
+                        <ul className="main-menu d-none d-lg-inline font-small"> 
                             <li> <a href="/">World</a> </li> 
                             <li> <a href="category-grid.html">Politics</a> </li>
                             <li> <a href="category-masonry.html">Business</a> </li>
@@ -81,11 +102,7 @@ function Header() {
                     </nav>
                 </div>
                 <div className="float-right header-tools text-muted font-small">
-                    {/* <ul className="header-social-network d-inline-block list-inline mr-15">
-                        <li className="list-inline-item"><a className="social-icon fb text-xs-center" target="_blank" href="#"><i className="elegant-icon social_facebook"></i></a></li>
-                        <li className="list-inline-item"><a className="social-icon tw text-xs-center" target="_blank" href="#"><i className="elegant-icon social_twitter "></i></a></li>
-                        <li className="list-inline-item"><a className="social-icon pt text-xs-center" target="_blank" href="#"><i className="elegant-icon social_pinterest "></i></a></li>
-                    </ul> */}
+                    
                     <div className="off-canvas-toggle-cover d-inline-block">
                         <div className="off-canvas-toggle hidden d-inline-block" id="off-canvas-toggle">
                             <span></span>
