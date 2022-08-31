@@ -149,16 +149,17 @@ function Home() {
                             </div>
                             <div class="post-content p-30">
                               <div class="entry-meta meta-0 font-small mb-10">
-                                <a href="category.html"><span class="post-cat text-info">Artists</span></a>
-                                <a href="category.html"><span class="post-cat text-success">Film</span></a>
+                                {latestPosts.keyords.length > 0 ? latestPosts.keywords.map((item) => {
+                                  return (<a href="category.html"><span class="post-cat text-info">{item}</span></a>)
+                                }) : null}
                               </div>
                               <div class="d-flex post-card-content">
                                 <h5 class="post-title mb-20 font-weight-900">
                                   <a href="single.html">{item.title.slice(0, 75)}</a>
                                 </h5>
-                                {/* <div class="post-excerpt mb-25 font-small text-muted">
+                                <div class="post-excerpt mb-25 font-small text-muted">
                                   <span dangerouslySetInnerHTML={{__html:item?.content.slice(0, 150)}}></span>
-                                </div> */}
+                                </div>
                                 <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
                                   <span class="post-on">27 August</span>
                                   <span class="time-reading has-dot">12 mins read</span>
