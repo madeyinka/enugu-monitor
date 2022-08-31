@@ -149,7 +149,7 @@ function Home() {
                             </div>
                             <div class="post-content p-30">
                               <div class="entry-meta meta-0 font-small mb-10">
-                                {latestPosts.keyords.length > 0 ? latestPosts.keywords.map((item) => {
+                                {latestPosts.keywords?.length > 0 ? latestPosts.keywords.map((item) => {
                                   return (<a href="category.html"><span class="post-cat text-info">{item}</span></a>)
                                 }) : null}
                               </div>
@@ -163,7 +163,7 @@ function Home() {
                                 <div class="entry-meta meta-1 float-left font-x-small text-uppercase">
                                   <span class="post-on">27 August</span>
                                   <span class="time-reading has-dot">12 mins read</span>
-                                  <span class="post-by has-dot">23k views</span>
+                                  {/* <span class="post-by has-dot">23k views</span> */}
                                 </div>
                               </div>
                             </div>
