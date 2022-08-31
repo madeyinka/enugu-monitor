@@ -155,7 +155,7 @@ function Home() {
                               </div>
                               <div class="d-flex post-card-content">
                                 <h5 class="post-title mb-20 font-weight-900">
-                                  <a href="single.html">{item.title.slice(0, 43)}</a>{item.title.length > 35 ? "..." : ""}
+                                  <a href="single.html">{item.title.slice(0, 43)}</a>{item.title.length > 43 ? "..." : ""}
                                 </h5>
                                 <div class="post-excerpt mb-25 font-small text-muted">
                                   <span dangerouslySetInnerHTML={{__html:item?.content.slice(0, 150)}}></span>
