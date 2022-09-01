@@ -3,6 +3,7 @@ import Axios from '../hook/Axios'
 import {timeDiff, dateFormatter} from '../Util/index'
 import {useParams} from 'react-router-dom'
 import useContent from '../hook/useContext'
+import Widget from '../component/Widget'
 
 function Detail() {
     const {content} = useContent()
@@ -34,16 +35,16 @@ function Detail() {
                             {item.title}
                         </h1>
                         <div class="row">
-                            <div class="col-md-6">
+                            {/* <div class="col-md-6">
                                 <div class="entry-meta align-items-center meta-2 font-small color-muted">
                                     <p class="mb-5">
-                                        <a class="author-avatar" href="#"><img class="img-circle" src="assets/imgs/authors/author-3.jpg" alt="" /></a>
-                                            By <a href="http://demos.alithemes.com/html/stories/demo/author.html"><span class="author-name font-weight-bold">{item.author}</span></a>
+                                        <a class="author-avatar" href="#"><img class="img-circle" src="../../assets/imgs/authors/author-3.jpg" alt="" /></a>
+                                            By <a href="/"><span class="author-name font-weight-bold">{item.author}</span></a>
                                     </p>
                                     <span class="mr-10"> {dateFormatter(item.date_added)}</span>
                                     <span class="has-dot"> {timeDiff(item.date_added)}</span>
                                 </div>
-                            </div>
+                            </div> */}
                             <div class="col-md-6 text-right d-none d-md-inline">
                                 {/* <ul class="header-social-network d-inline-block list-inline mr-15">
                                     <li class="list-inline-item text-muted"><span>Share this: </span></li>
@@ -58,9 +59,9 @@ function Detail() {
                         <img class="border-radius-10" src={item.image} alt="post-title" />
                     </figure>
                     <article class="entry-wraper mb-50">
-                        {/* <div class="excerpt mb-30">
-                            <p>Gosh jaguar ostrich quail one excited dear hello and bound and the and bland moral misheard roadrunner flapped lynx far that and jeepers giggled far and far bald that roadrunner python inside held shrewdly the manatee.</p>
-                        </div> */}
+                        {item.short_content &&<div class="excerpt mb-30">
+                            <p>{item.short_content}</p>
+                        </div>}
                         <div class="entry-main-content dropcap wow fadeIn animated">
                             <span dangerouslySetInnerHTML={{__html: item.content}}></span>
                         </div>
@@ -102,15 +103,9 @@ function Detail() {
                                         <div class="row mb-40 list-style-2">
                                             <div class="col-md-4">
                                                 <div class="post-thumb position-relative border-radius-5">
-                                                    <div class="img-hover-slide border-radius-5 position-relative" style={{"backgroundImage": "url(assets/imgs/news/news-13.jpg)"}}>
+                                                    <div class="img-hover-slide border-radius-5 position-relative" style={{"backgroundImage": "url(../../assets/imgs/news/news-13.jpg)"}}>
                                                         <a class="img-link" href="single.html"></a>
                                                     </div>
-                                                    <ul class="social-share">
-                                                        <li><a href="#"><i class="elegant-icon social_share"></i></a></li>
-                                                        <li><a class="fb" href="#" title="Share on Facebook" target="_blank"><i class="elegant-icon social_facebook"></i></a></li>
-                                                        <li><a class="tw" href="#" target="_blank" title="Tweet now"><i class="elegant-icon social_twitter"></i></a></li>
-                                                        <li><a class="pt" href="#" target="_blank" title="Pin it"><i class="elegant-icon social_pinterest"></i></a></li>
-                                                    </ul>
                                                 </div>
                                             </div>
                                             <div class="col-md-8 align-self-center">
@@ -136,6 +131,9 @@ function Detail() {
                         </div>
                     </article>
                 </div>
+            </div>
+            <div class="col-lg-4 primary-sidebar sticky-sidebar">
+                <Widget />
             </div>
         </div>
     </div>
