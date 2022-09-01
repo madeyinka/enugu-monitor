@@ -14,7 +14,7 @@ function Detail() {
         let isMounted = true
         content?.forEach((i) => {
             if (i.id === id){
-                setItem(i)
+               isMounted && setItem(i)
             } 
         })
         return () => {
@@ -34,8 +34,8 @@ function Detail() {
                         <h1 class="entry-title mb-30 font-weight-900">
                             {item.title}
                         </h1>
-                        <div class="row">
-                            {/* <div class="col-md-6">
+                        {/* <div class="row">
+                            <div class="col-md-6">
                                 <div class="entry-meta align-items-center meta-2 font-small color-muted">
                                     <p class="mb-5">
                                         <a class="author-avatar" href="#"><img class="img-circle" src="../../assets/imgs/authors/author-3.jpg" alt="" /></a>
@@ -44,22 +44,22 @@ function Detail() {
                                     <span class="mr-10"> {dateFormatter(item.date_added)}</span>
                                     <span class="has-dot"> {timeDiff(item.date_added)}</span>
                                 </div>
-                            </div> */}
+                            </div>
                             <div class="col-md-6 text-right d-none d-md-inline">
-                                {/* <ul class="header-social-network d-inline-block list-inline mr-15">
+                                <ul class="header-social-network d-inline-block list-inline mr-15">
                                     <li class="list-inline-item text-muted"><span>Share this: </span></li>
                                     <li class="list-inline-item"><a class="social-icon fb text-xs-center" target="_blank" href="#"><i class="elegant-icon social_facebook"></i></a></li>
                                     <li class="list-inline-item"><a class="social-icon tw text-xs-center" target="_blank" href="#"><i class="elegant-icon social_twitter "></i></a></li>
                                     <li class="list-inline-item"><a class="social-icon pt text-xs-center" target="_blank" href="#"><i class="elegant-icon social_pinterest "></i></a></li>
-                                </ul> */}
+                                </ul>
                             </div>
-                        </div>   
+                        </div>    */}
                     </div>
                     <figure class="image mb-30 m-auto text-center border-radius-10">
-                        <img class="border-radius-10" src={item.image} alt="post-title" />
+                        <img class="border-radius-10" src={item.image} alt="" />
                     </figure>
                     <article class="entry-wraper mb-50">
-                        {item.short_content &&<div class="excerpt mb-30">
+                        {item.short_content && <div class="excerpt mb-30">
                             <p>{item.short_content}</p>
                         </div>}
                         <div class="entry-main-content dropcap wow fadeIn animated">
@@ -68,9 +68,10 @@ function Detail() {
                         <div class="entry-bottom mt-50 mb-30 wow fadeIn animated">
                             <div class="tags">
                                 <span>Tags: </span>
-                                <a href="category.html" rel="tag">deer</a>
-                                <a href="category.html" rel="tag">nature</a>
-                                <a href="category.html" rel="tag">conserve</a>
+                                {item.keywords?.length > 0 ? 
+                                item.keywords.map((i) => {
+                                    return (<a href="/" rel="tag" key={i.value}>{i.label}</a>)
+                                }): null}
                             </div>
                         </div>
                         {/* <div class="author-bio p-30 mt-50 border-radius-10 bg-white wow fadeIn animated">
