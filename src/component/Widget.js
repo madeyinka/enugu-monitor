@@ -26,14 +26,14 @@ function Widget() {
                             return (<li className="mb-30 wow fadeInUp animated" key={item._id}>
                             <div className="d-flex bg-white has-border p-25 hover-up transition-normal border-radius-5">
                                 <div className="post-content media-body">
-                                    <h6 className="post-title mb-15 text-limit-2-row font-medium"><a href="single.html">{item.title}</a></h6>
+                                    <h6 className="post-title mb-15 text-limit-2-row font-medium"><a href={"/content/"+item.slug+"/"+item.id}>{item.title}</a></h6>
                                     <div className="entry-meta meta-1 float-left font-x-small text-uppercase">
                                         <span className="post-on">{dateFormatter(item.date_added)}</span>
                                         <span className="post-by has-dot">{timeDiff(item.date_added)}</span>
                                     </div>
                                 </div>
                                 <div className="post-thumb post-thumb-80 d-flex ml-15 border-radius-5 img-hover-scale overflow-hidden">
-                                    <a className="color-white" href="single.html">
+                                    <a className="color-white" href={"/content/"+item.slug+"/"+item.id}>
                                         <img src={item.image} alt="" />
                                     </a>
                                 </div>
