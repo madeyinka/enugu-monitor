@@ -102,18 +102,18 @@ function Header() {
                             </li> */}
                             <li className="menu-item-has-children"><a href="#">Category</a>
                                 <ul className="sub-menu font-small">
-                                    <li> <a href="/category/world/1234567">World</a> </li> 
-                                    <li> <a href="/category/politics/40a10653-20af-44fa-9257-82cbd61212ff">Politics</a> </li>
-                                    <li> <a href="/category/business/40405076-c169-4043-8a0e-fed672a8a085">Business</a> </li>
-                                    <li> <a href="/category/education/1234567">Education</a> </li>
-                                    <li> <a href="/category/technology/1234567">Technology</a> </li>
-                                    <li> <a href="/category/entertainment/1234567">Entertainment </a> </li>
-                                    <li> <a href="/category/lifestyle/1234567">Lifestyle</a> </li>
-                                    <li> <a href="/category/sport/1234567">Sport</a> </li>
-                                    <li> <a href="/category/science/1234567">Science</a> </li>
-                                    <li> <a href="/category/culture/1234567">Culture</a> </li>
-                                    <li> <a href="/category/tourism/1234567">Tourism</a> </li>
-                                    <li> <a href="/category/art/1234567">Art</a> </li>
+                                    <li> <a href="/category/world">World</a> </li> 
+                                    <li> <a href="/category/politics">Politics</a> </li>
+                                    <li> <a href="/category/business">Business</a> </li>
+                                    <li> <a href="/category/education">Education</a> </li>
+                                    <li> <a href="/category/technology">Technology</a> </li>
+                                    <li> <a href="/category/entertainment">Entertainment </a> </li>
+                                    <li> <a href="/category/lifestyle">Lifestyle</a> </li>
+                                    <li> <a href="/category/sport">Sport</a> </li>
+                                    <li> <a href="/category/science">Science</a> </li>
+                                    <li> <a href="/category/culture">Culture</a> </li>
+                                    <li> <a href="/category/tourism">Tourism</a> </li>
+                                    <li> <a href="/category/art">Art</a> </li>
                                 </ul>
                             </li>
                             {/* <li className="menu-item-has-children"><a href="#">Single post</a>
