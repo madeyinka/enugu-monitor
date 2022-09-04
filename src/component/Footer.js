@@ -13,7 +13,7 @@ function Footer() {
                     <div className="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a className="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-1.jpg" alt="" />
+                                <img src="../../assets/imgs/news/thumb-1.jpg" alt="" />
                             </a>
                         </div>
                         <div className="post-content media-body">
@@ -24,7 +24,7 @@ function Footer() {
                     <div className="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a className="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-2.jpg" alt="" />
+                                <img src="../../assets/imgs/news/thumb-2.jpg" alt="" />
                             </a>
                         </div>
                         <div className="post-content media-body">
@@ -35,7 +35,7 @@ function Footer() {
                     <div className="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a className="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-3.jpg" alt="" />
+                                <img src="../../assets/imgs/news/thumb-3.jpg" alt="" />
                             </a>
                         </div>
                         <div className="post-content media-body">
@@ -46,7 +46,7 @@ function Footer() {
                     <div className="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
                         <div className="post-thumb post-thumb-64 d-flex mr-15 border-radius-5 img-hover-scale overflow-hidden">
                             <a className="color-white" href="single.html">
-                                <img src="assets/imgs/news/thumb-4.jpg" alt="" />
+                                <img src="../../assets/imgs/news/thumb-4.jpg" alt="" />
                             </a>
                         </div>
                         <div className="post-content media-body">
