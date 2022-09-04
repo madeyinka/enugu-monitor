@@ -11,15 +11,8 @@ function Detail() {
     const [related, setRelated] = useState()
 
     useEffect(() => {
-        let isMounted = true
-        content?.forEach((i) => {
-            if (i.id === id){
-               isMounted && setItem(i)
-            } 
-        })
-        return () => {
-            isMounted = false
-        }
+       const result = content?.find(i => i.id === id)
+       setItem(result)
     },[content])
 
    useEffect(()=>{
@@ -39,7 +32,7 @@ function Detail() {
                 <div className="single-content2">
                     <div className="entry-header entry-header-style-1 mb-50">
                         <h1 className="entry-title mb-30 font-weight-900">
-                            {item.title}
+                            {item?.title}
                         </h1>
                         {/* <div className="row">
                             <div className="col-md-6">
@@ -63,20 +56,20 @@ function Detail() {
                         </div>    */}
                     </div>
                     <figure className="image mb-30 m-auto text-center border-radius-10">
-                        <img className="border-radius-10" src={item.image} alt="" />
+                        <img className="border-radius-10" src={item?.image} alt="" />
                     </figure>
                     <article className="entry-wraper mb-50">
-                        {item.short_content && <div className="excerpt mb-30">
-                            <p>{item.short_content}</p>
+                        {item?.short_content && <div className="excerpt mb-30">
+                            <p>{item?.short_content}</p>
                         </div>}
                         <div className="entry-main-content dropcap wow fadeIn animated">
-                            <span dangerouslySetInnerHTML={{__html: item.content}}></span>
+                            <span dangerouslySetInnerHTML={{__html: item?.content}}></span>
                         </div>
                         <div className="entry-bottom mt-50 mb-30 wow fadeIn animated">
                             <div className="tags">
                                 <span>Tags: </span>
-                                {item.keywords?.length > 0 ? 
-                                item.keywords.map((i) => {
+                                {item?.keywords?.length > 0 ? 
+                                item?.keywords.map((i) => {
                                     return (<a href="/" rel="tag" key={i.value}>{i.label}</a>)
                                 }): null}
                             </div>

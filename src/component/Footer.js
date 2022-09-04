@@ -7,7 +7,7 @@ function Footer() {
       <div className="container">
       <div className="sidebar-widget widget-latest-posts mb-30 mt-20 wow fadeInUp animated">
                 <div className="widget-header-2 position-relative mb-30">
-                    <h5 className="mt-5 mb-30">Categories</h5>
+                    <h5 className="mt-5 mb-30">Top Categories</h5>
                 </div>
                 <div className="carausel-3-columns">
                     <div className="carausel-3-columns-item d-flex bg-grey has-border p-25 hover-up-2 transition-normal border-radius-5">
@@ -65,7 +65,7 @@ function Footer() {
                 <div className="col-lg-3 col-md-6">
                     <div className="sidebar-widget wow fadeInUp animated mb-30">
                         <div className="widget-header-2 position-relative mb-30">
-                            <h5 className="mt-5 mb-30">About me</h5>
+                            <h5 className="mt-5 mb-30">About Enugu Monitor</h5>
                         </div>
                         <div className="textwidget">
                             <p>
@@ -87,22 +87,22 @@ function Footer() {
                 <div className="col-lg-2 col-md-6">
                     <div className="sidebar-widget widget_categories wow fadeInUp animated mb-30" data-wow-delay="0.1s">
                         <div className="widget-header-2 position-relative mb-30">
-                            <h5 className="mt-5 mb-30">Quick link</h5>
+                            <h5 className="mt-5 mb-30">Popular Categories</h5>
                         </div>
                         <ul className="font-small">
-                            <li className="cat-item cat-item-2"><a href="#">About me</a></li>
-                            <li className="cat-item cat-item-4"><a href="#">Help & Support</a></li>
-                            <li className="cat-item cat-item-5"><a href="#">​​Licensing Policy</a></li>
-                            <li className="cat-item cat-item-6"><a href="#">Refund Policy</a></li>
-                            <li className="cat-item cat-item-7"><a href="#">Hire me</a></li>
-                            <li className="cat-item cat-item-7"><a href="#">Contact</a></li>
+                            <li className="cat-item cat-item-2"><a href="#">Politics</a></li>
+                            <li className="cat-item cat-item-4"><a href="#">Business</a></li>
+                            <li className="cat-item cat-item-5"><a href="#">​Interviews</a></li>
+                            <li className="cat-item cat-item-6"><a href="#">Entertainment</a></li>
+                            <li className="cat-item cat-item-7"><a href="#">Sport</a></li>
+                            <li className="cat-item cat-item-7"><a href="#">Culture</a></li>
                         </ul>
                     </div>
                 </div>
                 <div className="col-lg-3 col-md-6">
                     <div className="sidebar-widget widget_tagcloud wow fadeInUp animated mb-30" data-wow-delay="0.2s">
                         <div className="widget-header-2 position-relative mb-30">
-                            <h5 className="mt-5 mb-30">Tagcloud</h5>
+                            <h5 className="mt-5 mb-30">Tags</h5>
                         </div>
                         <div className="tagcloud mt-50">
                             <a className="tag-cloud-link" href="category.html">beautiful</a>
@@ -132,10 +132,10 @@ function Footer() {
                 </div>
             </div>
             <div className="footer-copy-right pt-30 mt-20 wow fadeInUp animated">
-                <p className="float-md-left font-small text-muted">© 2020, Stories - Personal Blog HTML Template </p>
-                <p className="float-md-right font-small text-muted">
+                <p className="float-md-left font-small text-muted">© 2020, All rights reserved </p>
+                {/* <p className="float-md-right font-small text-muted">
                     Design by <a href="https://alithemes.com" target="_blank">AliThemes</a> | All rights reserved
-                </p>
+                </p> */}
             </div>
         </div>
     </footer>

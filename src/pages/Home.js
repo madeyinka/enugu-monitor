@@ -54,10 +54,10 @@ function Home() {
                         <div className="col-md-8 text-md-right font-small align-self-center">
                             <p className="d-inline-block mr-5 mb-0"><i className="elegant-icon  icon_tag_alt mr-5 text-muted"></i>Hot tags:</p>
                             <ul className="list-inline d-inline-block tags">
-                                <li className="list-inline-item"><a href="#"># 2023Elections</a></li>
-                                <li className="list-inline-item"><a href="#"># NigeriaDecides</a></li>
-                                <li className="list-inline-item"><a href="#"># ASUU Strike</a></li>
-                                <li className="list-inline-item"><a href="#"># Insecurity</a></li>
+                                <li className="list-inline-item"><a href="#">#2023Elections</a></li>
+                                <li className="list-inline-item"><a href="#">#NigeriaDecides</a></li>
+                                <li className="list-inline-item"><a href="#">#ASUU Strike</a></li>
+                                <li className="list-inline-item"><a href="#">#Insecurity</a></li>
                             </ul>
                         </div>
                     </div>

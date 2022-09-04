@@ -50,7 +50,7 @@ function Header() {
             <div className="container">
                 <div className="row pt-20 pb-20">
                     <div className="col-md-3 col-xs-6">
-                        <a href="/"><img className="logo" src="assets/imgs/theme/logo.jpg" alt="Enugu Monitor" /></a>
+                        <a href="/"><img className="logo" src="../../assets/imgs/theme/logo.jpg" alt="Enugu Monitor" /></a>
                     </div>
                     <div className="col-md-9 col-xs-6 text-right header-top-right ">
                         {/* <ul className="list-inline nav-topbar d-none d-md-inline">
@@ -86,9 +86,9 @@ function Header() {
                      
                         <ul id="mobile-menu" className="d-block d-lg-none text-muted">
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="/">Home</a>
                             </li>
-                            <li className="menu-item-has-children"><a href="#">Pages</a>
+                            {/* <li className="menu-item-has-children"><a href="#">Pages</a>
                                 <ul className="sub-menu font-small">
                                     <li><a href="page-about.html">About</a></li>
                                     <li><a href="page-contact.html">Contact</a></li>
@@ -99,23 +99,31 @@ function Header() {
                                     <li><a href="page-author.html">Author</a></li>
                                     <li><a href="page-404.html">404 page</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
                             <li className="menu-item-has-children"><a href="#">Category</a>
                                 <ul className="sub-menu font-small">
-                                    <li><a href="category-list.html">List layout</a></li>
-                                    <li><a href="category-grid.html">Grid layout</a></li>
-                                    <li><a href="category-masonry.html">Masonry layout</a></li>
-                                    <li><a href="category-big.html">Big layout</a></li>
+                                    <li> <a href="/category/world/1234567">World</a> </li> 
+                                    <li> <a href="/category/politics/40a10653-20af-44fa-9257-82cbd61212ff">Politics</a> </li>
+                                    <li> <a href="/category/business/40405076-c169-4043-8a0e-fed672a8a085">Business</a> </li>
+                                    <li> <a href="/category/education/1234567">Education</a> </li>
+                                    <li> <a href="/category/technology/1234567">Technology</a> </li>
+                                    <li> <a href="/category/entertainment/1234567">Entertainment </a> </li>
+                                    <li> <a href="/category/lifestyle/1234567">Lifestyle</a> </li>
+                                    <li> <a href="/category/sport/1234567">Sport</a> </li>
+                                    <li> <a href="/category/science/1234567">Science</a> </li>
+                                    <li> <a href="/category/culture/1234567">Culture</a> </li>
+                                    <li> <a href="/category/tourism/1234567">Tourism</a> </li>
+                                    <li> <a href="/category/art/1234567">Art</a> </li>
                                 </ul>
                             </li>
-                            <li className="menu-item-has-children"><a href="#">Single post</a>
+                            {/* <li className="menu-item-has-children"><a href="#">Single post</a>
                                 <ul className="sub-menu font-small">
                                     <li><a href="single.html">Default</a></li>
                                     <li><a href="single-2.html">Big image</a></li>
                                     <li><a href="single-3.html">Left image</a></li>
                                     <li><a href="single-4.html">With sidebar</a></li>
                                 </ul>
-                            </li>
+                            </li> */}
                         </ul>
                     </nav>
                 </div>
