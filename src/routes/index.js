@@ -14,7 +14,7 @@ const Pages = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/content/:slug/:id" element={<Detail />} />
-                <Route path="/category/:slug/:id" element={<Category />} />
+                <Route path="/category/:slug" element={<Category />} />
             </Routes>
         </Suspense>
     )
