@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import useContent from '../hook/useContext'
 import Axios from '../hook/Axios'
+import { sortByDate } from '../Util'
 
 function Header() {
     const {setContent, setCategories} = useContent()
@@ -13,7 +14,8 @@ function Header() {
             const response = await Axios.get('/content/posts?user='+process.env.REACT_APP_USER, {
                 signal:controller.signal
         })
-        isMounted && setContent(response.data.data.posts)
+        const result = response.data?.data.posts
+        isMounted && setContent(result.sort(sortByDate))
         } catch (err) {
                 console.error(err.message)
             }
@@ -43,6 +45,7 @@ function Header() {
             controller.abort()
         }
     },[])
+
   return (
     <>
     <header className="main-header header-style-1 font-heading">
@@ -58,7 +61,7 @@ function Header() {
                             <li className="list-inline-item"><a href="/"><i className="mr-5"></i>About Us</a></li>
                         </ul>
                         <span className="vertical-divider mr-20 ml-20 d-none d-md-inline"></span> */}
-                        <button className="search-icon d-none d-md-inline"><span className="mr-15 text-muted font-small"><i className="mr-5"></i>Search</span></button>
+                        {/* <button className="search-icon d-none d-md-inline"><span className="mr-15 text-muted font-small"><i className="mr-5"></i>Search</span></button> */}
                         {/* <button className="btn btn-radius bg-primary text-white ml-15 font-small box-shadow">Buy Now</button> */}
                     </div>
                 </div>

@@ -44,7 +44,7 @@ function Category() {
                                         <div className="col-md-4">
                                             <div className="post-thumb position-relative border-radius-5">
                                                 <div className="img-hover-slide border-radius-5 position-relative" style={{"backgroundImage": `url(${item.image})`}}>
-                                                    <a className="img-link" href="single.html"></a>
+                                                    <a className="img-link" href={"/content/"+item.slug+"/"+item.id}></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,7 +57,7 @@ function Category() {
                                                 }) : null}
                                                 </div>
                                                 <h5 className="post-title font-weight-900 mb-20">
-                                                    <a href="single.html">{item.title}</a>
+                                                    <a href={"/content/"+item.slug+"/"+item.id}>{item.title}</a>
                                                     {/* <span className="post-format-icon"><i className="elegant-icon icon_star_alt"></i></span> */}
                                                 </h5>
                                                 <div className="entry-meta meta-1 float-left font-x-small text-uppercase">

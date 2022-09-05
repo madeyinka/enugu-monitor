@@ -71,7 +71,7 @@ function Footer() {
                             <p>
                                 Start writing, no matter what. The water does not flow until the faucet is turned on.
                             </p>
-                            <p><strong className="color-black">Address</strong><br />
+                            {/* <p><strong className="color-black">Address</strong><br />
                                 123 Main Street<br />
                                 New York, NY 10001</p>
                             <p><strong className="color-black">Follow me</strong><br />
@@ -80,7 +80,7 @@ function Footer() {
                                     <li className="list-inline-item"><a className="tw" href="#" target="_blank" title="Tweet now"><i className="elegant-icon social_twitter"></i></a></li>
                                     <li className="list-inline-item"><a className="pt" href="#" target="_blank" title="Pin it"><i className="elegant-icon social_pinterest"></i></a></li>
                                 </ul>
-                            </p>
+                            </p> */}
                         </div>
                     </div>
                 </div>
@@ -94,8 +94,6 @@ function Footer() {
                             <li className="cat-item cat-item-4"><a href="#">Business</a></li>
                             <li className="cat-item cat-item-5"><a href="#">​Interviews</a></li>
                             <li className="cat-item cat-item-6"><a href="#">Entertainment</a></li>
-                            <li className="cat-item cat-item-7"><a href="#">Sport</a></li>
-                            <li className="cat-item cat-item-7"><a href="#">Culture</a></li>
                         </ul>
                     </div>
                 </div>
@@ -110,8 +108,6 @@ function Footer() {
                             <a className="tag-cloud-link" href="category.html">droll</a>
                             <a className="tag-cloud-link" href="category.html">intimate</a>
                             <a className="tag-cloud-link" href="category.html">loving</a>
-                            <a className="tag-cloud-link" href="category.html">travel</a>
-                            <a className="tag-cloud-link" href="category.html">fighting </a>
                         </div>
                     </div>
                 </div>
@@ -125,7 +121,6 @@ function Footer() {
                             <form className="input-group form-subcriber mt-30 d-flex">
                                 <input type="email" className="form-control bg-white font-small" placeholder="Enter your email" />
                                 <button className="btn bg-primary text-white" type="submit">Subscribe</button>
-                                <label className="mt-20"> <input className="mr-5" name="name" type="checkbox" value="1" required="" /> I agree to the <a href="#" target="_blank">terms &amp; conditions</a> </label>
                             </form>
                         </div>
                     </div>
